@@ -1,7 +1,17 @@
-on: push
+name: Run Node.js Server with Express
+
+on:
+    push:
+        branches:
+            - main
+
 jobs:
-    first-job:
-        runs-on: windows-latest
+    build-and-run:
+        runs-on: ubuntu-latest
+        
         steps:
-            - run: node --version
-            - run: npm --version
+            - name: Installing Dependencies
+              run: npm install
+            
+            - name: Running Node.js server
+              run: node server.js
