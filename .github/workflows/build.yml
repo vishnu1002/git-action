@@ -11,7 +11,12 @@ jobs:
         
         steps:
             - name: Installing Dependencies
-              run: npm install
+              run: |
+                sudo apt update
+                sudo apt install nodejs
+                node -v
+                sudo apt install nodejs
+                node -v
             
             - name: Running Node.js server
               run: node server.js
