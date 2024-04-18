@@ -10,18 +10,16 @@ jobs:
         runs-on: ubuntu-latest
         
         steps:
-            - name: Installing Dependencies
-              run: |
-                sudo apt-get update
-                sudo apt-get install nodejs
-                node -v
-                sudo apt-get install npm
-                npm -v
-            
-            - name: Debug info
-              run: |
-                pwd
-                ls -al
+            # - name: Installing Dependencies
+            #   run: |
+            #     sudo apt-get update
+            #     sudo apt-get install nodejs
+            #     node -v
+            #     sudo apt-get install npm
+            #     npm -v
             
             - name: Running Node.js server
               run: node server.js
+            
+            - name: Running main.py
+              run: python main.py
