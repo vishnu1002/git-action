@@ -18,5 +18,10 @@ jobs:
                 sudo apt-get install npm
                 npm -v
             
+            - name: Debug info
+              run: |
+                pwd
+                ls -al
+            
             - name: Running Node.js server
               run: node server.js
