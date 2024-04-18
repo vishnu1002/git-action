@@ -18,8 +18,8 @@ jobs:
             #     sudo apt-get install npm
             #     npm -v
             
-            - name: Running Node.js server
-              run: node server.js
+            # - name: Running Node.js server
+            #   run: node server.js
             
             - name: Running main.py
               run: python main.py
